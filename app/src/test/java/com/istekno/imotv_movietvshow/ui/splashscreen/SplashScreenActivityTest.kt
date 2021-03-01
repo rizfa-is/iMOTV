@@ -3,11 +3,10 @@ package com.istekno.imotv_movietvshow.ui.splashscreen
 import android.widget.ImageView
 import com.istekno.imotv_movietvshow.BuildConfig
 import com.istekno.imotv_movietvshow.R
-import com.istekno.imotv_movietvshow.ui.home.HomeActivity
-import org.junit.Test
-
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
+import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
