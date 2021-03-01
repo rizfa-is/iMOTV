@@ -55,7 +55,7 @@ class DetailMovieActivity : BaseActivityViewModel<ActivityDetailMovieBinding, De
     @SuppressLint("SetTextI18n")
     private fun populateCourse(movieEntity: MovieEntity) {
 
-        binding.tvMovieTitle.text = "${movieEntity.title} (${movieEntity.year})"
+        binding.tvMovTitle.text = "${movieEntity.title} (${movieEntity.year})"
         binding.tvMovieInfo.text = "${movieEntity.country}   |   ${movieEntity.duration}   |   ${movieEntity.rating}"
         binding.tvMovieLanguage.text = movieEntity.language
         binding.tvMovieOverview.text = movieEntity.overview

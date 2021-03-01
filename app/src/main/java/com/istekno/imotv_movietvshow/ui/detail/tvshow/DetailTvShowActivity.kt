@@ -55,7 +55,7 @@ class DetailTvShowActivity : BaseActivityViewModel<ActivityDetailTvShowBinding, 
     @SuppressLint("SetTextI18n")
     private fun populateCourse(tvShowEntity: TVShowEntity) {
 
-        binding.tvShowTitle.text = "${tvShowEntity.title} (${tvShowEntity.year})"
+        binding.tvTvsTitle.text = "${tvShowEntity.title} (${tvShowEntity.year})"
         binding.tvShowInfo.text = "${tvShowEntity.duration}   |   ${tvShowEntity.rating}"
         binding.tvShowLanguage.text = tvShowEntity.language
         binding.tvShowOverview.text = tvShowEntity.overview

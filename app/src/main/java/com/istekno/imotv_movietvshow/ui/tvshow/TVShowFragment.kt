@@ -39,7 +39,7 @@ class TVShowFragment : BaseFragmentViewModel<FragmentTvShowBinding, TVShowViewMo
 
             tvShowAdapter.setShows(shows)
 
-            with(binding.rvTvShow) {
+            with(binding.rvShow) {
                 layoutManager = GridLayoutManager(context, 2)
                 setHasFixedSize(true)
                 adapter = tvShowAdapter

@@ -11,7 +11,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         layout = R.layout.activity_home
         super.onCreate(savedInstanceState)
 
-        val pagerAdapter = HomePagerAdapter(supportFragmentManager)
+        val pagerAdapter = HomePagerAdapter(this, supportFragmentManager)
         binding.viewPager.adapter = pagerAdapter
         binding.tabs.setupWithViewPager(binding.viewPager)
     }
