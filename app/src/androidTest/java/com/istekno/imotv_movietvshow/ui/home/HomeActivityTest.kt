@@ -13,7 +13,6 @@ import com.istekno.imotv_movietvshow.utils.DataDummy
 import org.junit.Before
 import org.junit.Test
 
-
 class HomeActivityTest {
 
     private val dummyMovies = DataDummy.generateDummyMovie()
@@ -34,8 +33,16 @@ class HomeActivityTest {
     @Test
     fun loadDetailMovie() {
         onView(withId(R.id.rv_movie)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
+
         onView(withId(R.id.tv_mov_title)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_mov_title)).check(matches(withText("${dummyMovies[0].title} (${dummyMovies[0].year})")))
+
+        onView(withId(R.id.tv_movie_info)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_movie_info)).check(matches(withText("${dummyMovies[0].country}   |   ${dummyMovies[0].duration}   |   ${dummyMovies[0].rating}")))
+
+        onView(withId(R.id.tv_movie_language)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_movie_language)).check(matches(withText(dummyMovies[0].language)))
+
         onView(withId(R.id.tv_movie_overview)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_movie_overview)).check(matches(withText(dummyMovies[0].overview)))
     }
@@ -43,10 +50,19 @@ class HomeActivityTest {
     @Test
     fun loadDetailTVShow() {
         onView(withText("TV Show")).perform(click())
+
         onView(withId(R.id.rv_show)).check(matches(isDisplayed()))
         onView(withId(R.id.rv_show)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
+
         onView(withId(R.id.tv_tvs_title)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_tvs_title)).check(matches(withText("${dummyShows[0].title} (${dummyShows[0].year})")))
+
+        onView(withId(R.id.tv_show_info)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_show_info)).check(matches(withText("${dummyShows[0].duration}   |   ${dummyShows[0].rating}")))
+
+        onView(withId(R.id.tv_show_language)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_show_language)).check(matches(withText(dummyShows[0].language)))
+
         onView(withId(R.id.tv_show_overview)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_show_overview)).check(matches(withText(dummyShows[0].overview)))
     }
