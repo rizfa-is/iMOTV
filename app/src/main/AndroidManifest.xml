@@ -16,11 +16,9 @@
         <activity
             android:name=".ui.detail.movie.DetailMovieActivity"
             android:theme="@style/Theme.IMOTVMovieTVShow.NoActionBar" />
-        <activity
-            android:name=".ui.home.HomeActivity"
-            android:theme="@style/Theme.IMOTVMovieTVShow.NoActionBar"/>
 
-        <activity android:name=".ui.splashscreen.SplashScreenActivity">
+        <activity android:name=".ui.home.HomeActivity"
+            android:theme="@style/Theme.IMOTVMovieTVShow.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
